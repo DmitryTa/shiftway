@@ -35,6 +35,7 @@
       
     });
 
+ 
 
 function openModal(){
 	$('.modal-overlay').fadeIn(200, function(){
@@ -156,31 +157,19 @@ function changeParam(model, color, price){
  	openModal();
     changeParam('Smart Balance Classic', 'Черный', 23+' '+200);
  });
+
 });
 
 
-// function changeParam(price){
-	
-// 	 $('#price').text(price);
-// 	 $('#model-select').css('display', 'none');
-//  }
-//  $('.buy-1').click(function(openProduct){
-//  	openProduct.preventDefault();
-//  	openModal();
-//  var modelGyro = document.getElementById('product-1');
-//   var modelColor = modelGyro.getAttribute("data-color");
-//      changeParam(33+' '+203);
-//     document.getElementById('reSult').innerHTML = modelColor; 
+$('.product-description__slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    pauseOnHover: true,
+    speed: 600,
   
-//  });
+  });
 
-//  $('.buy-2').click(function(openProduct){
-//  	openProduct.preventDefault();
-//  	openModal();
-//   var modelGyro = document.getElementById('product-2');
-//   var modelColor = modelGyro.getAttribute("data-color");
-//      $('#price').text('25 200');
-//     document.getElementById('reSult').innerHTML = modelColor; 
-//     $('#model-select').css('display', 'none');
-//  });
-// });
+
