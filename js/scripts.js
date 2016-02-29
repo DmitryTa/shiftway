@@ -161,7 +161,7 @@ function changeParam(model, color, price){
 });
 
 
-$('.product-description__slider').slick({
+$('.slider').slick({
     infinite: true,
     slidesToShow: 1,
     dots: false,
@@ -173,3 +173,37 @@ $('.product-description__slider').slick({
   });
 
 
+
+
+function sliderSwitch(){
+if ($("#slider-swith-blue").prop("checked")){
+    document.getElementById('slider-blue').style.display='block';
+    document.getElementById('slider-black').style.display='none'; 
+    document.getElementById('slider-red').style.display='none'; 
+    document.getElementById('slider-yellow').style.display='none'; 
+
+}
+else if ($("#slider-swith-black").prop("checked")) {
+     document.getElementById('slider-blue').style.display='none';
+    document.getElementById('slider-black').style.display='block'; 
+    document.getElementById('slider-red').style.display='none'; 
+    document.getElementById('slider-yellow').style.display='none'; 
+}
+else if ($("#slider-swith-red").prop("checked")) {
+     document.getElementById('slider-blue').style.display='none';
+    document.getElementById('slider-black').style.display='none'; 
+    document.getElementById('slider-red').style.display='block'; 
+    document.getElementById('slider-yellow').style.display='none';  
+}
+else {
+     document.getElementById('slider-blue').style.display='none';
+    document.getElementById('slider-black').style.display='none'; 
+    document.getElementById('slider-red').style.display='none'; 
+    document.getElementById('slider-yellow').style.display='block'; 
+}
+};
+
+
+$('.radio-class').change(function(){
+  sliderSwitch();
+});
