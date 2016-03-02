@@ -13,29 +13,32 @@
       <div class="nav-menu" id="menu">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
               <div class="logo">
                 <a href="index.html">
                 <span class="shift">Shift</span><span class="way">way</span><span class="dot">.ru</span>
                 <div class="logo-decor"></div>
                 </a>
               </div>
+              <a class="mobile-menu-icon" href="#" id="mobileButton"><div></div></a>
             </div>
-
-            <div class="col-md-5 text-right">
-              <nav class="main-nav">
+              
+            <div class="col-md-9 text-right">
+              <nav class="main-nav" id="mobile-menu">
                 <ul>
                    <li><a href="gyro.html">О гироскутерах</a></li>
                   <li><a class="smoothScroll" href="#catalog">Каталог</a></li>
                   <li><a href="">Доставка и оплата</a></li>
+
                 </ul>
+                <div class="page-header__btn-order">
+                <a class="btn-order-now" href="#">Заказать сейчас</a>
+                <span class="icon-basket-1"></span>
+              </div>
               </nav>
             </div>
-			<div class="col-md-3 text-right">
-	            <div class="page-header__btn-order">
-	            	<a class="btn-order-now" href="#">Заказать сейчас</a>
-	            	<span class="icon-basket-1"></span>
-	            </div>
+			
+	           
 	        </div>
           </div>
         </div>
@@ -424,12 +427,12 @@
            или оставить заявку и наш менеджер свяжется с Вами</p> 
            <form name="first-form" action="mail.php" method="post" id="ajaxform">
            <div class="modal-window__input">
-            <input type="text" required  id="name-form" required>
+            <input type="text" required  id="name-form" required name="name">
             <label for="name-form">Имя</label>
             <div class="decor"></div>
           </div>
            <div class="modal-window__input">
-            <input type="text" required  id="text-form">
+            <input type="text" required  id="text-form" name="phone">
             <label for="text-form">Телефон</label>
             <div class="decor"></div>
           </div>
