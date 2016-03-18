@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Shiftway О гироскутерах</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -14,33 +15,33 @@
       <div class="nav-menu" id="menu">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
               <div class="logo">
                 <a href="index.html">
                 <span class="shift">Shift</span><span class="way">way</span><span class="dot">.ru</span>
                 <div class="logo-decor"></div>
                 </a>
               </div>
+              <a class="mobile-menu-icon" href="#" id="mobileButton"><span></span></a>
             </div>
-            <div class="col-md-5 text-right">
-              <nav class="main-nav">
+              
+            <div class="col-md-9 text-right">
+              <nav class="main-nav" id="mobile-menu">
                 <ul>
                    <li class="nav-menu__active"><a href="gyro.html">О гироскутерах</a></li>
                   <li><a href="index.html#catalog">Каталог</a></li>
                   <li><a href="">Доставка и оплата</a></li>
+
                 </ul>
+                <div class="page-header__btn-order">
+                <a class="btn-order-now" href="#">Заказать сейчас</a>
+                <span class="icon-basket-1"></span>
+              </div>
               </nav>
             </div>
-			<div class="col-md-3 text-right">
-	            <div class="page-header__btn-order">
-	            	<a class="btn-order-now" href="#">Заказать сейчас</a>
-	            	<span class="icon-basket-1"></span>
-	            </div>
-	        </div>
-	        </div>
+          </div>
           </div>
         </div>
-      </div>
      </header>
      <main>
       <div class="about-smart">
@@ -73,22 +74,86 @@
      <footer class="page-footer">
           <div class="container">
             <div class="row">
-              <div class="col-md-7">
+              <div class="col-md-7 col-sm-12">
                 <h5 class="page-footer__title">Контакты</h5>
                 <div class="contacts">
                 <p class="contacts__adress"><span class="icon-home"></span>Россия, Санкт-Петербург</p>
                 <p class="contacts__tel"><a href="tel:9602808"><span class="icon-phone"></span>960-28-08</a></p>
                 <p class="contacts__mail"><a href="mailto:email@mail.com"><span class="icon-mail-alt"></span>email@mail.com</a></p>
               </div></div>
-              <div class="col-md-5">
+              <div class="col-md-5 col-sm-12">
                 <h5 class="page-footer__title">О нас</h5>
                 <p class="page-footer__about-us">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat praesentium velit, ea sint architecto soluta nemo nobis veniam laborum, consequatur, corporis, optio culpa cum aut sapiente. Voluptates expedita, totam mollitia consectetur neque, quibusdam deleniti, officia in, assumenda voluptas unde! Tempora commodi adipisci voluptate dolor iusto eveniet sit vel ullam repellendus!</p>
               </div>
             </div>
           </div>
         </footer>
+<div class="modal-overlay"></div>
+          <div class="modal-window">
+          <div class="modal-window__close-btn"></div>
+          <p class="modal-window__title">Для заказа вы можете позвонить нам по телефону 980 09 39, 
+           или оставить заявку и наш менеджер свяжется с Вами</p> 
+           <form name="first-form" action="send.php" method="post" id="ajaxform">
+           <div class="modal-window__input">
+            <input type="text" required  id="name-form" name="name" value="dima">
+            <label for="name-form">Имя</label>
+            <div class="decor"></div>
+          </div>
+           <div class="modal-window__input">
+            <input type="text" required  id="text-form" name="phone">
+            <label for="text-form">Телефон</label>
+            <div class="decor"></div>
+          </div>
+          
+           <p class="modal-title">Модель: <select id="model-select" name="model-name">
+             <option selected>Выберите модель</option>
+             <option value="Classic">Classic</option>
+             <option value="Transformer">Transformer</option>
+             <option value="XL">XL</option>
+             <option value="X">X</option>
+           </select>
+           <span id="model-name"></span></p>
+           <p class="modal-title">Цвет:
+           <select class="color-select" id="color-select-classic" name="model-color-classic">
+             <option selected>Выберите цвет</option>
+             <option>Красный</option>
+             <option>Белый</option>
+             <option>Черный</option>
+             <option>Желтый</option>
+             <option>Синий</option> 
+           </select>
+           <select class="color-select" id="color-select-transformer" name="model-color-transformer">
+             <option selected>Выберите цвет</option>
+             <option>Красный</option>
+             <option>Белый</option>
+             <option>Черный</option>
+             <option>Серый</option>
+           </select>
+           <select class="color-select" id="color-select-xl" name="model-color-xl">
+             <option selected>Выберите цвет</option>
+             <option>Черный</option>
+             <option>Огонь</option>
+             <option>Карбон</option>
+             <option>Граффити белый</option>
+             <option>Граффити желтый</option>
+           </select>
+           <select class="color-select" id="color-select-x" name="model-color-x">
+             <option selected>Выберите цвет</option>
+             <option>Красный</option>
+             <option>Белый</option>
+             <option>Черный</option>
+             <option>Синий</option> 
+           </select>
+           <span id="model-color"> </span>
+            
+           </p>
+           <p class="modal-title">К оплате:<span id="model-price"></span></p>
+           <input type="submit" value='Заказать'>
+           </form>
 
+            </div>
   <script src="js/jquery-2.2.0.min.js"></script>
+  
     <script src="js/scripts.js"></script>
 </body>
 </html>
